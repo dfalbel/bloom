@@ -17,7 +17,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // create_bloom_parameters
-SEXP create_bloom_parameters();
+int create_bloom_parameters();
 RcppExport SEXP _bloom_create_bloom_parameters() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;

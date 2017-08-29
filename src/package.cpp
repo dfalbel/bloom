@@ -1,6 +1,6 @@
 #include <Rcpp.h>
 #include <memory>
-#include "bloom/bloom_filter.hpp"
+#include "bloom_filter.hpp"
 using namespace Rcpp;
 
 // This is a simple example of exporting a C++ function to R. You can
@@ -18,8 +18,9 @@ NumericVector timesTwo(NumericVector x) {
   return x * 2;
 }
 
+
 //[[Rcpp::export]]
-SEXP create_bloom_parameters() {
+int create_bloom_parameters() {
 
   bloom_parameters parameters;
 
@@ -34,9 +35,10 @@ SEXP create_bloom_parameters() {
 
   //(*parameters).compute_optimal_parameters();
 
-  Rcpp::XPtr<bloom_parameters> ptr(parameters, true);
+  //Rcpp::XPtr<bloom_parameters> ptr(parameters, true);
 
-  return ptr;
+
+  return 0;
 }
 
 
